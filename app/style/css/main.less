@@ -1,0 +1,85 @@
+@base: #f9f9f9;
+@border: #ccccd2;
+@titles: #2770f9;
+
+h1 { white-space: nowrap; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+
+.flka-list-entry {
+
+  display: block;
+  overflow: hidden;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5px;
+  padding: 5px;
+
+  background-color: @base;
+  border-bottom: 2px solid @border;
+
+  .crop {
+    width: 150px;
+    height: 100px;
+    overflow: hidden;
+    float: left;
+    margin-right: 5px;
+    background: white;
+    text-align: center;
+    border: 1px solid @border;
+  }
+  .crop img {
+    width: auto;
+    height: 100px;
+  }
+
+  h2 {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 30px;
+    color: @titles;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+
+  p { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+}
+
+.description {
+  overflow: hidden;
+
+  p {
+    float: left;
+    margin-right: 5px;
+  }
+}
+
+.details {
+  margin-right: 10px;
+}
+
+ul.tags {
+  display: inline;
+  margin: 0;
+  padding: 0;
+
+  li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+  }
+
+  li + li:before {
+    content: ", ";
+  }
+}
+
+@media screen and (max-width:800px) {
+  .sm-only { display: none; }
+}
+@media screen and (min-width:800px){
+  .pushUp {
+    float: left;
+    margin-right: 10px;
+  }
+}

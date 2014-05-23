@@ -1,0 +1,19 @@
+<div class="container">
+
+    <flka-header-bar selected='flickrList'></flka-header-bar>
+
+    <div ng-repeat='entry in entries'>
+        <flka-list-entry post-title='{{entry.title}}'
+                     published='{{entry.published}}'
+                        author='{{entry.author}}'
+                        author-id='{{entry.author_id}}'
+                         thumb='{{entry.media.m}}'
+                         flickr-link='{{entry.link}}'
+                         entry-index='{{$index}}'></flka-list-entry>
+    </div>
+
+    <div class='loading' ng-show='entries.length == 0'>
+        <img src='app/style/img/ajax-loader.gif' /> Loading Results...
+    </div>
+
+</div>
