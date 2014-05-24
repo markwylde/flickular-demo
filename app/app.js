@@ -7,7 +7,6 @@ angular.module('flickularApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap'])
     .config(function($routeProvider) {
         $routeProvider
             .when('/', {
-                controller:'HomeCtrl',
                 templateUrl:'app/views/home/home.html'
             })
             .when('/flickr/list', {
