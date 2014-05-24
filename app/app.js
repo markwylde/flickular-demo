@@ -4,7 +4,7 @@ angular.module('flickularApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap'])
 
     .value('flickrURL', 'http://api.flickr.com/services/feeds/photos_public.gne?tags=potato&tagmode=all&format=json&jsoncallback=JSON_CALLBACK')
 
-    .config(function($routeProvider) {
+    .config(['$routeProvider', function($routeProvider) {
         $routeProvider
             .when('/', {
                 templateUrl:'app/views/home/home.html'
@@ -20,7 +20,7 @@ angular.module('flickularApp', ['ngRoute', 'ngSanitize', 'ui.bootstrap'])
             .otherwise({
                 redirectTo:'/'
             });
-    })
+    }])
 
     .filter('tidyAuthor', function() {
         return function(input) {
