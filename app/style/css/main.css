@@ -69,6 +69,13 @@ ul.tags li + li:before {
   .sm-hide {
     display: none;
   }
+  .flka-list-entry .crop {
+    width: 90px;
+    height: 100px;
+  }
+  .flka-list-entry .crop img {
+    height: 100px;
+  }
 }
 @media screen and (min-width: 800px) {
   .pushUp {
