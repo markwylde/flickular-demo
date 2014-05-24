@@ -2,7 +2,7 @@
 
 angular.module('flickularApp')
 
-    .controller('FlickrListCtrl', function($scope, flickrAPI) {
+    .controller('FlickrListCtrl', ['$scope', 'flickrAPI', function($scope, flickrAPI) {
 
         $scope.entries = [];
 
@@ -14,9 +14,9 @@ angular.module('flickularApp')
 
         $scope.refresh();
 
-    })
+    }])
 
-    .controller('FlickrViewCtrl', function($scope, $routeParams, flickrAPI) {
+    .controller('FlickrViewCtrl', ['$scope', '$routeParams', 'flickrAPI', function($scope, $routeParams, flickrAPI) {
 
         $scope.refresh = function() {
             flickrAPI.search().then( function(data) {
@@ -26,4 +26,4 @@ angular.module('flickularApp')
 
         $scope.refresh();
 
-    });
+    }]);

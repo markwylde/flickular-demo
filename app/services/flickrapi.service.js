@@ -2,7 +2,7 @@
 
 angular.module('flickularApp')
 
-.factory('flickrAPI', function($q, $http, flickrURL) {
+.factory('flickrAPI', ['$q', '$http', 'flickrURL', function($q, $http, flickrURL) {
     return new function() {
 
         this.search = function() {
@@ -20,4 +20,4 @@ angular.module('flickularApp')
         }
 
     };
-});
+}]);
