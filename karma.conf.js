@@ -14,15 +14,17 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'libraries/jquery/js/jquery-2.1.1.min.js',
-      'libraries/angular/js/angular.min.js',
-      'libraries/angular/js/angular-mocks.js',
-      'libraries/angular/js/angular-sanitize.min.js',
-      'libraries/angular/js/angular-route.min.js',
-      'libraries/angular/js/ui-bootstrap-tpls-0.11.0.min.js',
-      'libraries/bootstrap/js/bootstrap.min.js',
-      'app/app.js',
-      'app/**/*.js',
+      'src/libraries/jquery/js/jquery-2.1.1.min.js',
+      'src/libraries/angular/js/angular.min.js',
+      'src/libraries/angular/js/angular-mocks.js',
+      'src/libraries/angular/js/angular-sanitize.min.js',
+      'src/libraries/angular/js/angular-route.min.js',
+      'src/libraries/angular/js/ui-bootstrap-tpls-0.11.0.min.js',
+      'src/libraries/bootstrap/js/bootstrap.min.js',
+      'src/app.js',
+      'src/controllers/*.js',
+      'src/directives/*.js',
+      'src/services/*.js',
       'test/**/*.js'
     ],
 
@@ -70,6 +72,6 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false
+    singleRun: true
   });
 };

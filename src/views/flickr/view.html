@@ -1,0 +1,31 @@
+<div class="container">
+
+    <flka-header-bar selected="flickrList"></flka-header-bar>
+
+    <div ng-hide="entry">
+        <img src="assets/img/ajax-loader.gif" /> Loading details of Flickr entry...
+    </div>
+
+    <div ng-show="entry">
+
+        <h1><span style="margin-right: 20px;">{{ entry.title }}</span> <a href="#/flickr/list" class="btn btn-info pull-right sm-hide">Back</a></h1>
+
+        <div class="crop pull-left details">
+            <img ng-src="{{ entry.media.m }}" />
+        </div>
+                <p><a tooltip-placement="bottom"
+                      href="http://www.flickr.com/people/{{entry.author_id}}"
+                      target="_blank"><strong>Photo author</strong></a>
+                 | <strong>Published:</strong> {{ entry.published | date  : "medium" }}</p>
+
+                <p>{{entry.description | htmlToPlaintext}}</p>
+
+                <div><strong>Tags:</strong>
+                    <ul class="tags">
+                        <li ng-repeat="tag in entry.tags.split(' ')"><a href="#">{{tag}}</a></li>
+                    </ul>
+                </div>
+
+    </div>
+
+</div>
