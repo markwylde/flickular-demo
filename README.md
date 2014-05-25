@@ -9,6 +9,7 @@ Flickular is a demo web application to show how to create an AngularJS applicati
  - LessCSS
  - Jasmine Unit Testing
  - Karma test runner
+ - Grunt task runner
 
 This application aims to show you how to build an AngularJS application from scratch in a structured way.
 
