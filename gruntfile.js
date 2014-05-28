@@ -3,6 +3,13 @@ module.exports = function(grunt) {
     // Project configuration.
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        karma: {
+            travis: {
+                configFile: 'karma.conf.js',
+                singleRun: true,
+                browsers: ['PhantomJS']
+            }
+        },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> <%= grunt.template.today("yyyy-mm-dd") %> */\n'
@@ -42,8 +49,10 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-copy');
     grunt.loadNpmTasks('grunt-contrib-watch');
+    grunt.loadNpmTasks('grunt-karma');
 
     // Default task(s).
     grunt.registerTask('default', ['uglify', 'cssmin', 'copy', 'watch']);
+    grunt.registerTask('test', ['karma:travis'])
 
 };
