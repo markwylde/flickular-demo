@@ -5,9 +5,10 @@ Flickular is a demo web application to show how to create an AngularJS applicati
      - directives
      - services
      - $ajax
+     - $q promises
  - Flickr API's (JSON with padding)
  - Bootstrap
- - LessCSS
+ - Less CSS
  - Jasmine Unit Testing
  - Karma test runner
  - Grunt task runner
