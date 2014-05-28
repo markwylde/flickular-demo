@@ -18,5 +18,9 @@
     "karma-chrome-launcher": "0.1.4",
     "karma-jasmine": "0.1.5",
     "karma-ng-scenario": "~0.1.0"
+  },
+  "scripts": {
+    "test": "./node_modules/.bin/karma start --single-run --browsers PhantomJS"
   }
+
 }
